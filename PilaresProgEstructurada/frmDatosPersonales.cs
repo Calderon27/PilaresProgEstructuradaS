@@ -16,5 +16,10 @@ namespace PilaresProgEstructurada
         {
             InitializeComponent();
         }
+
+        private void txtNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
