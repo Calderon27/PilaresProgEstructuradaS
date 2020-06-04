@@ -16,7 +16,7 @@ namespace PilaresProgEstructurada
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListas());
+            Application.Run(new frmDatosPersonales());
         }
     }
 }
