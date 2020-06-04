@@ -19,14 +19,24 @@ namespace PilaresProgEstructurada
 
         private void btnConvertir_Click(object sender, EventArgs e)
         {
-            if(this.txtNumero.Text.Length==0)
+            if (this.txtNumero.Text.Length == 0)
             {
                 MessageBox.Show("Debe ingresar un entero....");
                 return; //abandonar ejecucion
             }
 
-            int numero = int.Parse(this.txtNumero.Text);
-            binario(numero);
+
+            if (int.TryParse(this.txtNumero.Text, out int numero))
+            {
+                if (numero >= 0 && numero <= 255)
+                    binario(numero);
+                else
+                    MessageBox.Show("numero fuera de rango");
+            }
+            else
+            {
+                MessageBox.Show("Debes de ingresar valores numericos....", "Atencion");
+            }
         }
         void binario(int num)
         {
@@ -66,12 +76,9 @@ namespace PilaresProgEstructurada
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if((e.KeyChar >= 32 && e.KeyChar <= 47)||(e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+         
+                
+                
         }
     }
 }
