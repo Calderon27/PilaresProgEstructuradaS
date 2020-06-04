@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBinarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBinarios.Designer.cs">
+      <DependentUpon>frmBinarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBinarios.resx">
+      <DependentUpon>frmBinarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListados.resx">
       <DependentUpon>frmListados.cs</DependentUpon>
     </EmbeddedResource>
