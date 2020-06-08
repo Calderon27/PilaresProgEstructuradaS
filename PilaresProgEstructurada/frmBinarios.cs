@@ -80,5 +80,30 @@ namespace PilaresProgEstructurada
                 
                 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //convertir de binario a decimaol 
+            double r = 0;
+            if (this.checkBox1.Checked)
+                r = r + (1 * Math.Pow(2, 0));
+            if (this.checkBox2.Checked)
+                r = r + (1 * Math.Pow(2, 1));
+            if (this.checkBox3.Checked)
+                r = r + (1 * Math.Pow(2, 2));
+            if (this.checkBox4.Checked)
+                r = r + (1 * Math.Pow(2, 3));
+            if (this.checkBox5.Checked)
+                r = r + (1 * Math.Pow(2, 4));
+            if (this.checkBox6.Checked)
+                r = r + (1 * Math.Pow(2, 5));
+            if (this.checkBox7.Checked)
+                r = r + (1 * Math.Pow(2, 6));
+            if (this.checkBox8.Checked)
+                r = r + (1 * Math.Pow(2, 7));
+
+            this.txtNumero.Text = r.ToString();
+
+        }
     }
 }
